@@ -1,0 +1,51 @@
+<header class="header">
+    <nav class="nav containerPersonal">
+        <a class="nav__logo">Darwin Cadena</a>
+        <!-- //div es para separarlo por bloque -->
+
+        <!-- [ngClass]="showMenu ? 'show-menu ':'hide-menu'" es para el evento propio de angular una clase condicionada -->
+        <div class="nav__menu " [ngClass]="showMenu===true ? 'show-menu ':'hide-menu'">
+            <ul class="nav__list grid">
+                <!-- //li es para crear un items -->
+                <li class="nav__item">
+                    <a class="nav__link"><i class="fas fa-home nav__icon"></i>
+              Inicio</a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link"><i class="fas fa-user nav__icon"></i>
+              Acerca</a>
+                </li>
+
+
+                <li class="nav__item">
+                    <a class="nav__link"><i class="fas fa-home nav__icon"></i>
+              Servicio</a>
+                </li>
+
+                <li class="nav__item">
+                    <a class="nav__link"><i class="fas fa-home nav__icon"></i>
+              Experiencia</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link"><i class="fas fa-home nav__icon"></i>
+              Otro</a>
+                </li>
+
+            </ul>
+            <!-- aqui va el icono o la x para desplegar el menu cuando la pabtalla este pequeña  -->
+            <!-- utilizamos el evento click pra que se pueda utilizar la clase que realizamos en components del cambio de estado del menu -->
+            <i class="fas fa-times nav__close" (click)="cambioEstadoMenu()"></i>
+            <!-- --------------------- -->
+        </div>
+        <div class="nav__btns">
+            <!-- cambio de tema -->
+            <i class="change-theme far fa-moon"></i>
+            <!-- este div de aui es para el menu de bars  -->
+            <!-- utilizamos el evento click pra que se pueda utilizar la clase que realizamos en components del cambio de estado del menu -->
+            <div class="nav__toggle" (click)="cambioEstadoMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+</header>
